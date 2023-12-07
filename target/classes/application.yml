@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: blackbox-annotations
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_blackbox?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+    database: mysql
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type: TRACE
+server:
+  port: 8080
+
+
+  thymeleaf:
+    allow-request-attributes: true
+    allow-session-attributes: true
+    allow-servlet-context-attributes: true
